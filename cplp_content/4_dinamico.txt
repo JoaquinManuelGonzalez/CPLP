@@ -1,0 +1,90 @@
+CADENA DINÁMICA
+
+*1  Registro de Activación Main
+    Punto de Retorno
+    x = 1...7 -> 3 -> 2 -> 1...7
+    vec(1) = 1
+    vec(2) = 2 -> 4
+    vec(3) = 3
+    vec(4) = 4
+    vec(5) = 5 -> 12
+    vec(6) = 6
+    vec(7) = 7
+    y = 7
+    Function B
+    Procedure D
+    Procedure C
+    Valor de Retorno 2
+
+*2  Registro de Activación B
+    Punto de Retorno
+    Enlace estático (*1)
+    Enlace dinámico (*1)
+    y = 4
+    Valor de Retorno
+
+*3  Registro de Activación D
+    Punto de Retorno
+    Enlace estático (*1)
+    Enlace dinámico (*1)
+    x = 1...7 -> 1 -> 4 -> 20 -> 1...7
+    vec(1) = 1 -> 8
+    vec(2) = 1 -> 8 -> 160
+    vec(3) = 1 -> 24 -> 8
+    vec(4) = 1 -> 7 -> 4
+    vec(5) = 1 -> 40 -> 71
+    vec(6) = 1
+    vec(7) = 1
+    i = 2 -> 4
+    Procedure A
+    Function B
+    Valor de Retorno
+
+*4  Registro de Activación A
+    Punto de Retorno
+    Enlace estático (*3)
+    Enlace dinámico (*3)
+    y = 6
+    Valor de Retorno 3
+
+*5  Registro de Activación B
+    Punto de Retorno
+    Enlace estático (*3)
+    Enlace dinámico (*4)
+    Valor de Retorno
+
+*6  Registro de Activación C
+    Punto de Retorno
+    Enlace estático (*1)
+    Enlace dinámico (*4)
+    i = 1 -> 3 -> 5 -> 8
+    y = 6 -> 2
+    Valor de Retorno 16 -> 32
+
+*7  Registro de Activación B
+    Punto de Retorno
+    Enlace estático (*3)
+    Enlace dinámico (*6)
+    Valor de Retorno
+
+*8  Registro de Activación B
+    Punto de Retorno
+    Enlace estático (*3)
+    Enlace dinámico (*6)
+    Valor de Retorno
+
+Imprime:
+    8
+    160
+    8
+    4
+    71
+    1
+    1
+    1
+    4
+    3
+    4
+    12
+    6
+    7
